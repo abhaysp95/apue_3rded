@@ -10,7 +10,7 @@ const char *buf2 = "ABCDEFGHIJ";
 
 int main(void) {
 	int fd = -1;
-	if ((fd = open("file_hole.txt", O_RDWR | O_CREAT, FILE_MODE)) == -1) {
+	if ((fd = open("file_hole.txt", O_RDWR | O_CREAT | O_TRUNC, FILE_MODE)) == -1) {
 		err_sys("Can't open/create file \"file_hole.txt\"\n");
 	}
 
@@ -20,7 +20,7 @@ int main(void) {
 	}
 
 	// seek by some offset
-	if (lseek(fd, 1600, SEEK_CUR) == -1) {
+	if (lseek(fd, 16000, SEEK_CUR) == -1) {
 		err_sys("error in lseek\n");
 	}
 
