@@ -26,3 +26,4 @@ target_include_directories(apue_library PUBLIC apue_lib/inc)
 # target_compile_features(apue_library PUBLIC c_std_99)
 
 add_subdirectory(introduction)
+add_subdirectory(standardization_implementation)
