@@ -13,3 +13,7 @@ target_link_libraries(fig5-11 apue_library)
 add_executable(fig5-12 fig5-12.c)
 add_dependencies(fig5-12 apue_library)
 target_link_libraries(fig5-12 apue_library)
+
+add_executable(fig5-13 fig5-13.c)
+add_dependencies(fig5-13 apue_library)
+target_link_libraries(fig5-13 apue_library)
