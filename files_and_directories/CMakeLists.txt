@@ -18,3 +18,7 @@ target_link_libraries(fig4-16 apue_library)
 add_executable(fig4-21 fig4-21.c)
 add_dependencies(fig4-21 apue_library)
 target_link_libraries(fig4-21 apue_library)
+
+add_executable(fig4-22 fig4-22.c ../standardization_implementation/fig2-16.c)
+add_dependencies(fig4-22 apue_library)
+target_link_libraries(fig4-22 apue_library)
