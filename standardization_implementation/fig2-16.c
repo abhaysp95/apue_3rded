@@ -61,7 +61,7 @@ char *path_alloc(size_t *sizep) {
 	return ptr;
 }
 
-int main(void) {
+/* int main(void) {  // just for test
 	size_t size_p = 0;
 
 	char* pathname_buff = path_alloc(&size_p);
@@ -72,4 +72,4 @@ int main(void) {
 	}
 
 	return 0;
-}
+} */
