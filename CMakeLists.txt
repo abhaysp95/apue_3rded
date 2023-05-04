@@ -10,7 +10,7 @@ set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_C_FLAGS "-Wall")
 
 set(CMAKE_C_FLAGS_DEBUG "-ggdb")
-set(CMAKE_C_FLAGS_RELEASE "-03")
+set(CMAKE_C_FLAGS_RELEASE "-O3")  # full optimization
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
