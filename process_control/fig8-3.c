@@ -15,7 +15,10 @@ int main(void) {
 	} else if (pid == 0) {  // child process
 		globvar++;
 		autovar++;
-		_exit(0);
+		_exit(0); // doesn't do any flushing (unlike exit()), maybe
+				  // necessary for some std I/O lib function you're
+				  // using, depending on implentation, it could result
+				  // in indeterminate behaviour
 	} else {
 		// for parent, if you want anything here
 	}
