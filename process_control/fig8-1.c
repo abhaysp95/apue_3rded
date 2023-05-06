@@ -27,6 +27,8 @@ int main(void) {
 		printf("from parent: \n");
 		sleep(2);
 	}
+	// the order of parent-child execution is not same everytime, it's
+	// dependent on scheduling algo used by kernel
 
 	printf("after fork: \n");
 	printf("pid = %d, ppid = %d, glob = %d, val = %d\n", getpid(), getppid(), globvar, val);
