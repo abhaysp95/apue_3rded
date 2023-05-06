@@ -28,5 +28,10 @@ int main(void) {
 	// parent continues here (child will not reach, cause it exited)
 	printf("pid = %d, ppid = %d, globvar = %d, autovar = %d\n", getpid(), getppid(), globvar, autovar);
 
+	// the change is made in the parent space by child, because vfork() make
+	// child run in the parent's address space (even if there's change to be
+	// made on parent's address space), unlike some modern implentation of
+	// fork which support COW (copy-on-write)
+
 	exit(0);
 }
