@@ -22,11 +22,15 @@ int main(void) {
 // function written like this, to allow the kernel to switch between processes
 // as often as possible
 void charatatime(char *str) {
-	char *ptr;
+	// char *ptr;
 	int c;
 
 	setbuf(stdout, NULL);
-	for (ptr = str, c = *ptr; (c = *ptr++) != 0;) {
+	/* for (ptr = str, c = *ptr; (c = *ptr++) != 0;) {
+		putc(c, stdout);
+	} */
+
+	for (c = *str; (c = *str++) != 0;) {
 		putc(c, stdout);
 	}
 }
