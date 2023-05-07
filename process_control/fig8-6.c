@@ -6,7 +6,17 @@
 
 #include "fig8-5.c"
 
-/* int main(void) {
+void using_wait(void);
+void using_waitpid(void);
+
+int main(void) {
+
+	using_waitpid();
+
+	exit(0);
+}
+
+void using_wait(void) {
 	pid_t pid;
 	int status;
 
@@ -44,12 +54,12 @@
 	pr_exit(status);
 
 	exit(0);
-} */
+}
 
 // equivalent to above program, but with waitpid(). Although, waitpid() is set
 // to be non-blocking
 
-int main(void) {
+void using_waitpid(void) {
 	pid_t pid;
 	int status;
 
