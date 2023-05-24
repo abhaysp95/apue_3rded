@@ -34,3 +34,39 @@ target_link_libraries(fig8-17 apue_library)
 add_executable(fig8-20 fig8-20.c)
 add_dependencies(fig8-20 apue_library)
 target_link_libraries(fig8-20 apue_library)
+
+add_executable(fig8-23 fig8-23.c fig8-5.c)
+add_dependencies(fig8-23 apue_library)
+target_link_libraries(fig8-23 apue_library)
+
+add_executable(fig8-24 fig8-24.c fig8-5.c)
+add_dependencies(fig8-24 apue_library)
+target_link_libraries(fig8-24 apue_library)
+
+add_executable(fig8-25 fig8-25.c)
+add_dependencies(fig8-25 apue_library)
+target_link_libraries(fig8-25 apue_library)
+
+add_executable(fig8-28 fig8-28.c)
+add_dependencies(fig8-28 apue_library)
+target_link_libraries(fig8-28 apue_library)
+
+add_executable(fig8-29 fig8-29.c)
+add_dependencies(fig8-29 apue_library)
+target_link_libraries(fig8-29 apue_library)
+
+add_executable(nice_test nice_test.c)
+add_dependencies(nice_test apue_library)
+target_link_libraries(nice_test apue_library)
+
+add_executable(fig8-30 fig8-30.c)
+add_dependencies(fig8-30 apue_library)
+target_link_libraries(fig8-30 apue_library)
+
+add_executable(clktime_test clktime_test.c)
+add_dependencies(clktime_test apue_library)
+target_link_libraries(clktime_test apue_library)
+
+add_executable(fig8-31 fig8-31.c fig8-5.c)
+add_dependencies(fig8-31 apue_library)
+target_link_libraries(fig8-31 apue_library)
