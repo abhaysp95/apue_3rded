@@ -59,3 +59,5 @@ static void pr_times(clock_t real, const struct tms* start, const struct tms* en
 	printf("\tchild user: %7.2f\n", (end->tms_cutime - start->tms_cutime) / (double) clktck);
 	printf("\tchild system: %7.2f\n", (end->tms_cstime - start->tms_cstime) / (double) clktck);
 }
+
+// NOTE: get more clearance on what is difference between utime and cutime ? (what's child meaning here)
