@@ -70,3 +70,7 @@ target_link_libraries(clktime_test apue_library)
 add_executable(fig8-31 fig8-31.c fig8-5.c)
 add_dependencies(fig8-31 apue_library)
 target_link_libraries(fig8-31 apue_library)
+
+add_executable(fig8-30_updated_with_process_time fig8-30_updated_with_process_time.c)
+add_dependencies(fig8-30_updated_with_process_time apue_library)
+target_link_libraries(fig8-30_updated_with_process_time apue_library)
