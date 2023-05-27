@@ -29,12 +29,14 @@ static void sig_cld_handler(int signo) {
 	pid_t pid;
 	int status;
 
-	if (signal(SIGCLD, sig_cld_handler) == SIG_ERR) {
-		perror("signal() error");
-	}
 	// pid will store child pid
 	if ((pid = wait(&status)) < 0) {  // fetch child status
 		perror("wait() error");
+	}
+
+	// signal generated again only after an/other child termination status
+	if (signal(SIGCLD, sig_cld_handler) == SIG_ERR) {
+		perror("signal() error");
 	}
 
 	printf("pid (terminated child): %d\n", pid);
