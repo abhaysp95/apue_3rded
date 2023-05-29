@@ -8,15 +8,13 @@ static void sig_alarm_handler(int signo) {
 	longjmp(env_alarm, 1);
 }
 
+/** not complete implemention of sleep() */
 unsigned int sleep2(unsigned int seconds) {
 	if (signal(SIGALRM, sig_alarm_handler) == SIG_ERR) {
 		return seconds;
 	}
 	if (setjmp(env_alarm) == 0) {  // first time calling (not when coming from longjmp)
-		alarm(seconds); // if alarm() executes and signal handler is
-						// called before pause(), then pause() will not be
-						// executed because of this if block condition and
-						// thus process will not wait indefinitely
+		alarm(seconds);
 		pause();
 	}
 
