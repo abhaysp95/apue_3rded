@@ -65,5 +65,16 @@ int sysclone(const char* cmd) {
 		return -1;
 	}
 
+	printf("sysclone done\n");
 	return status;
 }
+
+/** Benefits:
+ * No signal is snt to the calling process when we type interrupt or quit
+ * character.
+ *
+ * When the "ed" command exits, SIGCHLD is not sent to the calling
+ * process. Instead, it is blocked, until we unblock it in the last call of
+ * sigprocmask, after we retrieve child's termination status in system
+ * (sysclone) function by calling waitpid
+ */

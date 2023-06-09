@@ -9,7 +9,8 @@
 // why signal is needed for system()
 
 // system() clone (same as fig8-13.c)
-static int sysclone(const char *cmd);
+// static int sysclone(const char *cmd);
+int sysclone(const char *cmd);
 
 static void sig_int_handler(int);
 static void sig_chld_handler(int);
@@ -42,7 +43,7 @@ static void sig_chld_handler(int signo) {
 	printf("caught SIGCHLD\n");
 }
 
-static int sysclone(const char *cmd) {
+/* static int sysclone(const char *cmd) {
 	if (cmd == NULL) {
 		return 1;
 	}
@@ -70,8 +71,9 @@ static int sysclone(const char *cmd) {
 		}
 	}
 
+	printf("sysclone done\n");
 	return status;
-}
+} */
 
 static void (*set_handler(int signo, void (*handler)(int)))(int) {
 	struct sigaction act, oact;
