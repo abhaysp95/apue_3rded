@@ -44,3 +44,8 @@ unsigned int sleep(unsigned int sec) {
 
 	return ret;
 }
+
+/** NOTE: the function sleep() here, still doesn't talk about messing with other
+ * previous implemenations of alarm, ie., if there is still some time left from
+ * previous alarm, after the alarm() from sleep() happened, then caller of sleep
+ * should check the return value and reset the previous alarm accordingly */
